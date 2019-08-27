@@ -86,7 +86,13 @@ def value_at_risk(p, theta):
 	
 def VaR(p, theta):
 	"""Alias for value_at_risk"""
-	out = value_at_risk(
+	out = value_at_risk(p=p, theta=theta)
+	return(out)
+
+def median(theta):
+	"""Returns the median of the exponential distribution with mean theta"""
+	out = math.log(2) * theta
+	return(out)
 	
 def tail_value_at_risk(p, theta):
 	"""Returns the TVaR at probability p for the exponential distribution with mean theta"""
@@ -106,6 +112,10 @@ def mgf(z, theta):
 def mode():
 	"""Returns the mode of the exponential distribution"""
 	return(0)
+		
+def skewness():
+	"""Returns the skewness of the exponential distribution"""
+	return(2)
 	
 def fisher_information(theta):
 	"""Returns the Fisher information for an exponential distrubtion with mean theta"""
